@@ -8,10 +8,9 @@
 
 A mobile-first, multilingual Progressive Web Application (PWA) designed for reporting civic issues. Built as part of the Potens frontend internship assignment, this project focuses heavily on **product thinking, resilient UX, performance under slow network conditions, and accessibility**.
 
-## 🔗 Live Demo & Walkthrough
+## 🔗 Live Demo
 
-- **Live Application:** [Deploy Link Placeholder](#)
-- **Loom Walkthrough:** [Loom Video Placeholder](#)
+- **Live Application:** [potens-intern-frontend-prabhat-mish.vercel.app](https://potens-intern-frontend-prabhat-mish.vercel.app/)
 
 ## 📸 Screenshots
 
