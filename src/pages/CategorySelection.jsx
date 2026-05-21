@@ -17,12 +17,12 @@ const CategorySelection = () => {
   const navigate = useNavigate();
 
   const categories = [
-    { id: 'infrastructure', icon: Map, color: 'text-orange-600', bg: 'bg-orange-50' },
-    { id: 'sanitation', icon: Trash2, color: 'text-emerald-600', bg: 'bg-emerald-50' },
-    { id: 'water', icon: Droplets, color: 'text-blue-600', bg: 'bg-blue-50' },
-    { id: 'electricity', icon: Zap, color: 'text-yellow-600', bg: 'bg-yellow-50' },
-    { id: 'transport', icon: Bus, color: 'text-purple-600', bg: 'bg-purple-50' },
-    { id: 'other', icon: MoreHorizontal, color: 'text-zinc-600', bg: 'bg-zinc-100' }
+    { id: 'infrastructure', icon: Map },
+    { id: 'sanitation', icon: Trash2 },
+    { id: 'water', icon: Droplets },
+    { id: 'electricity', icon: Zap },
+    { id: 'transport', icon: Bus },
+    { id: 'other', icon: MoreHorizontal }
   ];
 
   const handleSelect = (categoryId) => {
@@ -55,19 +55,23 @@ const CategorySelection = () => {
             <motion.button
               key={cat.id}
               onClick={() => handleSelect(cat.id)}
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full flex items-center justify-between p-4 bg-white border border-zinc-200 rounded-xl shadow-sm hover:shadow-md transition-all text-left group"
+              whileTap={{ 
+                y: 1, 
+                boxShadow: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+                backgroundColor: "#f4f4f5" 
+              }}
+              transition={{ duration: 0.1, ease: "easeOut" }}
+              className="w-full flex items-center justify-between p-4 bg-white border border-zinc-200 rounded-xl shadow-[0_2px_8px_-4px_rgba(0,0,0,0.05)] hover:border-zinc-300 transition-colors text-left group"
             >
               <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-lg ${cat.bg} ${cat.color}`}>
-                  <Icon className="w-5 h-5" strokeWidth={2} />
+                <div className="p-2.5 rounded-md bg-zinc-100/80 text-zinc-600 group-hover:bg-zinc-200/50 transition-colors">
+                  <Icon className="w-[18px] h-[18px]" strokeWidth={2} />
                 </div>
-                <span className="font-medium text-zinc-800">
+                <span className="text-[14px] font-medium text-zinc-800 tracking-tight">
                   {t(`categories.${cat.id}`)}
                 </span>
               </div>
-              <ChevronRight className="w-5 h-5 text-zinc-300 group-hover:text-zinc-500 transition-colors" />
+              <ChevronRight className="w-4 h-4 text-zinc-300 group-hover:text-zinc-500 group-hover:translate-x-0.5 transition-all duration-200" />
             </motion.button>
           );
         })}
