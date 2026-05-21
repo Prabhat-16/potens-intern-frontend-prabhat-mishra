@@ -15,12 +15,10 @@ A mobile-first, multilingual Progressive Web Application (PWA) designed for repo
 
 ## 📸 Screenshots
 
-*(Replace with actual screenshots of the application)*
-
 <p align="center">
-  <img src="https://via.placeholder.com/250x500.png?text=Category+Selection" alt="Category Selection" width="30%">
-  <img src="https://via.placeholder.com/250x500.png?text=Issue+Details" alt="Issue Details" width="30%">
-  <img src="https://via.placeholder.com/250x500.png?text=Confirmation" alt="Confirmation Timeline" width="30%">
+  <img src="public/screenshot-2.png" alt="Category Selection" width="30%">
+  <img src="public/screenshot-1.png" alt="Issue Details" width="30%">
+  <img src="public/screenshot-3.png" alt="Confirmation Timeline" width="30%">
 </p>
 
 ## ✨ Core Features
