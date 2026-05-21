@@ -47,14 +47,15 @@ const VoiceInput = ({ onResult }) => {
 
     recognition.onresult = (event) => {
       let finalTranscript = '';
+      let interimTranscript = '';
       for (let i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
           finalTranscript += event.results[i][0].transcript;
+        } else {
+          interimTranscript += event.results[i][0].transcript;
         }
       }
-      if (finalTranscript) {
-        onResult(finalTranscript);
-      }
+      onResult(finalTranscript, interimTranscript);
     };
 
     recognition.onerror = (event) => {

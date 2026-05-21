@@ -22,6 +22,8 @@ const IssueDetails = () => {
     category: ''
   });
   
+  const [interimText, setInterimText] = useState('');
+  
   useEffect(() => {
     const savedCategory = localStorage.getItem('issue_category');
     if (!savedCategory) {
@@ -43,11 +45,14 @@ const IssueDetails = () => {
     navigate('/confirmation');
   };
 
-  const handleVoiceResult = (text) => {
-    setFormData(prev => ({
-      ...prev,
-      description: prev.description ? `${prev.description} ${text}` : text
-    }));
+  const handleVoiceResult = (finalText, currentInterim = '') => {
+    if (finalText) {
+      setFormData(prev => ({
+        ...prev,
+        description: prev.description ? `${prev.description} ${finalText}` : finalText
+      }));
+    }
+    setInterimText(currentInterim);
   };
 
   return (
@@ -105,8 +110,11 @@ const IssueDetails = () => {
           </div>
           <textarea
             required
-            value={formData.description}
-            onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+            value={formData.description + (interimText ? (formData.description ? ' ' : '') + interimText : '')}
+            onChange={(e) => {
+              setInterimText('');
+              setFormData({ ...formData, description: e.target.value });
+            }}
             placeholder={t('details.descriptionPlaceholder')}
             className="w-full flex-1 min-h-[120px] p-3 bg-white border border-zinc-200 rounded-lg shadow-sm placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow resize-none text-zinc-900"
           />
