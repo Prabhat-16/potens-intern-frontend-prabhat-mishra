@@ -79,7 +79,7 @@ const SubmissionConfirmation = () => {
           >
             {copied ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
             <span className={copied ? 'text-green-600' : ''}>
-              {copied ? 'Copied' : 'Copy'}
+              {copied ? t('confirmation.copied') : t('confirmation.copy')}
             </span>
           </button>
         </div>
@@ -96,7 +96,7 @@ const SubmissionConfirmation = () => {
             <div className="w-4 h-4 rounded-full bg-blue-600 ring-4 ring-blue-50 z-10 shrink-0 mt-0.5" />
             <div>
               <p className="text-sm font-medium text-zinc-900">{t('confirmation.timeline.submitted')}</p>
-              <p className="text-xs text-zinc-500 mt-0.5">Just now</p>
+              <p className="text-xs text-zinc-500 mt-0.5">{t('confirmation.justNow')}</p>
             </div>
           </div>
           

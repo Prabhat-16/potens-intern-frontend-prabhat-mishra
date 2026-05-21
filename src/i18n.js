@@ -32,6 +32,9 @@ const resources = {
         successMessage: 'Your issue has been successfully registered.',
         referenceId: 'Reference ID',
         trackStatus: 'Track Status',
+        copy: 'Copy',
+        copied: 'Copied',
+        justNow: 'Just now',
         timeline: {
           submitted: 'Report Submitted',
           inReview: 'Under Review',
@@ -39,6 +42,9 @@ const resources = {
           resolved: 'Resolved'
         },
         homeBtn: 'Report Another Issue'
+      },
+      errors: {
+        unsupportedSpeech: 'Speech recognition is not supported in your browser.'
       }
     }
   },
@@ -72,6 +78,9 @@ const resources = {
         successMessage: 'आपकी समस्या सफलतापूर्वक पंजीकृत कर ली गई है।',
         referenceId: 'संदर्भ आईडी',
         trackStatus: 'स्थिति ट्रैक करें',
+        copy: 'कॉपी करें',
+        copied: 'कॉपी किया गया',
+        justNow: 'अभी-अभी',
         timeline: {
           submitted: 'रिपोर्ट जमा की गई',
           inReview: 'समीक्षा के तहत',
@@ -79,6 +88,9 @@ const resources = {
           resolved: 'समाधान किया गया'
         },
         homeBtn: 'अन्य समस्या रिपोर्ट करें'
+      },
+      errors: {
+        unsupportedSpeech: 'आपके ब्राउज़र में स्पीच रिकग्निशन समर्थित नहीं है।'
       }
     }
   }

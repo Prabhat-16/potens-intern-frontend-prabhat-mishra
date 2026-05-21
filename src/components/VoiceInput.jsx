@@ -29,7 +29,7 @@ const VoiceInput = ({ onResult }) => {
   const toggleListening = useCallback((e) => {
     e.preventDefault();
     if (!recognition) {
-      alert('Speech recognition is not supported in your browser.');
+      alert(t('errors.unsupportedSpeech'));
       return;
     }
 
